@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas lights</title>
+</head>
+<body>
+    <div class="lights">
+        <div class="bulb red"></div>
+        <div class="bulb yellow"></div>
+        <div class="bulb green"></div>
+        <div class="bulb aquamarine"></div>
+        <div class="bulb orange"></div>
+        <div class="bulb blue"></div>
+        <div class="bulb violet"></div>
+    </div>
+    <h1 class="lights-title">Christmas lights</h1>
+    <div class="control-buttons">
+        <button class="btn btn-off">OFF</button>
+        <button class="btn btn-on">ON</button>
+        <div class="speed-buttons"> Select shining speed
+            <div>
+                <input class="speed" type="radio" id="first-speed" name="speed" value="1" checked>
+                <label for="first-speed">1</label>
+            </div>
+            
+            <div>
+                <input class="speed" type="radio" id="second-speed" name="speed" value="2">
+                <label for="second-speed">2</label>   
+            </div>
+
+            <div>
+                <input class="speed" type="radio" id="third-speed" name="speed" value="3">
+                <label for="third-speed">3</label>
+            </div>
+        </div>
+
+        <div class="mode-buttons"> Select shining speed
+            <div>
+                <input class="btn-mode" type="radio" id="flicker" value="flicker" name="btn-mode" checked>
+                <label class="btn-mode-label" for="flicker">flicker</label>
+            </div>
+            
+            <div>
+                <input class="btn-mode" type="radio" id="continuous" value="continuous" name="btn-mode">
+                <label class="btn-mode-label" for="continuous">continuous</label>
+            </div>
+
+            <div>
+                <input class="btn-mode" type="radio" id="runningLights" value="runningLights" name="btn-mode">
+                <label class="btn-mode-label" for="runningLights">running lights</label> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

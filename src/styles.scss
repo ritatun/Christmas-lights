@@ -1,0 +1,338 @@
+$base-color: #000000;
+$christmas-red-color: #C30F16;
+$orange: #f18f0f;
+$yellow: #f1c40f;
+$green: #2ecc71;
+$aquamarine: #64fcfe;   
+$blue: #050a94;
+$violet: #be27b9;
+
+@mixin button {
+    color: $christmas-red-color;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: transparent;
+    width: 65px;
+    padding: 5px;
+    border: 1px solid $christmas-red-color;
+    border-radius: 3px;
+
+    &:hover {
+        animation: button-move .5s;
+    }
+}
+
+body {
+    background-color: $base-color;
+
+    h1 {
+        text-align: center;
+        color: $christmas-red-color;
+        text-transform: uppercase;
+        margin-top: 355px;
+        font-size: 45px;
+    }
+
+    .lights {
+        display: flex;
+        justify-content: center;
+
+        .bulb {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            margin: 0 30px;
+            position: relative;
+
+            @media screen and (max-width: 976px) and (min-width: 719px) {
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 20px;
+            }
+
+            @media screen and (max-width: 718px) and (min-width: 583px) {
+                width: 50px;
+                height: 50px;
+                margin: 0 15px;
+            }
+
+            @media screen and (max-width: 582px) and (min-width: 463px) {
+                width: 40px;
+                height: 40px;
+                margin: 0 12px;
+            }
+
+            @media screen and (max-width: 462px) and (min-width: 360px) {
+                width: 20px;
+                height: 60px;
+                margin: 0 12px;
+            }
+
+            @media screen and (max-width: 359px) and (min-width: 315px) {
+                width: 15px;
+                height: 50px;
+                margin: 0 12px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -12px;
+                left: 27px;
+                width: 20px;
+                height: 15px;
+                background-color: #414141;
+
+                @media screen and (max-width: 976px) and (min-width: 719px) {
+                    left: 22px;
+                    width: 15px;
+                    height: 12px;
+                }
+
+                @media screen and (max-width: 718px) and (min-width: 581px) {
+                    left: 18px;
+                    width: 15px;
+                    height: 12px;
+                } 
+
+                @media screen and (max-width: 718px) and (min-width: 581px) {
+                    top: -11px;
+                    left: 17px;
+                    width: 15px;
+                    height: 12px;
+                }
+
+                @media screen and (max-width: 580px) and (min-width: 463px) {
+                    top: -11px;
+                    left: 14px;
+                    width: 12px;
+                    height: 12px;
+                } 
+
+                @media screen and (max-width: 462px) and (min-width: 360px) {
+                    top: -9px;
+                    left: 4px;
+                    width: 12px;
+                    height: 12px;
+                }
+
+                @media screen and (max-width: 359px) and (min-width: 315px) {
+                    top: -10px;
+                    left: 3px;
+                    width: 8px;
+                    height: 12px;
+                }
+            }
+        }
+
+        .red {
+            background-color: $christmas-red-color;
+            //animation: 1s infinite alternate red-shine;   //
+
+        }
+        .yellow {
+            background-color: #f1c40f;
+            //animation: 3s infinite alternate yellow-shine;   //
+            
+        }
+        .green {
+            background-color: #2ecc71;
+            //animation: 3s infinite alternate green-shine;   //
+            
+        }
+        .aquamarine {
+            background-color: #64fcfe;
+            //animation: 3s infinite alternate aquamarine-shine;   //
+            
+        }
+        .orange {
+            background-color: #f18f0f;
+            //animation: 3s infinite alternate orange-shine;   //
+            
+        }
+        .blue {
+            background-color: #050a94;
+            //animation: 3s infinite alternate blue-shine;   //
+            
+        }
+        .violet {
+            background-color: #be27b9;
+            //animation: 3s infinite alternate violet-shine;   //
+            
+        }
+    }
+
+    .lights-title {
+        @media screen and (max-width: 765px) and (min-width: 468px) {
+            margin-top: 250px;
+        }
+
+        @media screen and (max-width: 467px) and (min-width: 315px) {
+            margin-top: 120px;
+        }
+
+    }
+
+    .control-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $christmas-red-color;
+
+        @media screen and (max-width: 943px) and (min-width: 315px) {
+            flex-direction: column;
+        }
+
+
+        .btn {
+            @include button;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .speed-buttons{
+            margin: 10px 30px 10px;
+
+            input {
+                cursor: pointer;
+            }
+
+            label {
+                color: $christmas-red-color;
+            }
+        }
+
+        .mode-buttons {
+            margin-left: 30px;
+            color: $christmas-red-color;
+
+            @media screen and (max-width: 943px) and (min-width: 315px) {
+                margin-left: 0;
+
+            }
+
+            .btn-mode {
+                cursor: pointer;
+                color: $christmas-red-color;
+                font-weight: 400;
+                font-size: 15px;
+                background-color: transparent;
+                padding: 3px;
+                border: 1px solid $christmas-red-color;
+                border-radius: 3px;
+
+                @media screen and (max-width: 435x) and (min-width: 315px) {
+                    display: block;
+    
+                }
+            }
+
+            .btn-mode-label {
+                @media screen and (max-width: 435x) and (min-width: 315px) {
+                    display: block;
+    
+                }
+            }
+        }
+    }
+}
+
+@mixin box-shadow-start($color) {
+    box-shadow: 0 0 20px 0 $color;
+}
+
+@mixin box-shadow-end($color) {
+    box-shadow: 0 0 20px 10px $color;
+}
+
+
+//keyframes flicker
+
+@keyframes red-shine {
+    from {
+        @include box-shadow-start($christmas-red-color);
+    }
+    to {
+        @include box-shadow-end($christmas-red-color);
+    }
+  }
+
+  @keyframes orange-shine {
+    from {
+        @include box-shadow-start($orange);
+    }
+    to {
+        @include box-shadow-end($orange);
+    }
+  }
+
+  @keyframes yellow-shine {
+    from {
+        @include box-shadow-start($yellow);
+    }
+    to {
+        @include box-shadow-end($yellow);
+    }
+  }
+
+  @keyframes green-shine {
+    from {
+        @include box-shadow-start($green);
+    }
+    to {
+        @include box-shadow-end($green);
+    }
+  }
+
+  @keyframes aquamarine-shine {
+    from {
+        @include box-shadow-start($aquamarine);
+    }
+    to {
+        @include box-shadow-end($aquamarine);
+    }
+  }
+
+  @keyframes blue-shine {
+    from {
+        @include box-shadow-start($blue);
+    }
+    to {
+        @include box-shadow-end($blue);
+    }
+  }
+
+  @keyframes violet-shine {
+    from {
+        @include box-shadow-start($violet);
+    }
+    to {
+        @include box-shadow-end($violet);
+    }
+  }
+
+  @keyframes button-move {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(2px);
+    }
+  }
+
+/* @media screen and (max-width: 976px) {
+    .bulb {
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+
+        &:before {
+            top: -12px;
+            left: 27px;
+            width: 20px;
+            height: 15px;
+
+        }
+
+    }
+} */
